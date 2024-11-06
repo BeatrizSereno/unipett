@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    
+}
+
+body {
+    
+    background-color: black;
+    font-size: 16px;
+   
+    
+}
+
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #05577D;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    place-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 600px;
+    gap: 10%;
+    z-index: 2;
+
+   
+
+    & .logo-container {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        & h1 {
+            font-family:'Bebas Neue';
+            font-size: 3.5rem;
+            letter-spacing: 4px;
+            color: #CEF2D7;
+            position: absolute;
+            top: 21.3%;
+            left: 9.7%;
+        }
+
+        & .u {
+            color: #CEF2D7;
+            font-size: 4.3rem;
+            top: 17%;
+            left: 7.5%;
+            font-weight: bold;
+            font-family: 'Geo';
+        }
+
+        & h2 {
+            font-family: 'Poppins';
+            color: #EBF1F2;
+            font-size: 1rem;
+            font-weight: 300;
+            margin-left: 120px;
+            margin-top: 20px;
+
+        }
+
+        
+
+      
+        & .logo {
+           width: 150px;
+           
+        }
+    }
+        
+    
+        
+        
+    
+
+    & h1 {
+        width: 100%;
+    }
+
+    & nav {
+
+        height: 100px;
+        width: 100%;
+
+        & ul {
+            place-items: center;
+            height: 100px;
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            margin-left: -27px;
+            font-family: 'Poppins';
+            font-weight: 300;
+            color: #CEF2D7;
+        }
+    }
+
+}
+section {
+    
+    background-color: #EBF1F2;
+    height: 53vw;
+    position: relative;
+
+    & .list {
+        width: 70vw;
+        height: 100%;
+        margin: auto;
+        position: relative;
+
+        & .item {
+            position: absolute;
+            inset: 0;
+
+            & .consulta-img {
+                
+                position: absolute;
+                left: 3%;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+
+                & img {
+                   transform: rotate(0deg);
+                   width: 60%;
+                   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+                   
+
+                }
+            }
+
+            & .content {
+                top: -35%;
+                position: absolute;
+                right: 35px;
+                width: 70%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: end;
+                gap: 20px;
+
+                & .informacao-servico {
+                    font-weight: 500;
+                    font-family: 'Poppins';
+                    color: #05577D;
+                }
+
+                & h2 {
+                    font-size: 6em;
+                    line-height: 1em;
+                    font-family: 'Bebas Neue';
+                    text-transform: uppercase;
+                    font-weight:500;
+                    color: #065473;
+                }
+
+                & .description {
+                    color:#05577D;
+                    font-family: 'Poppins';
+                    font-weight: 300;
+                    font-size: 12px;
+                    text-align: right;
+                    max-width: 400px;
+                }
+
+                & .information {
+                    border-radius: 30px;
+                    height: 35px;
+                    width: 120px;
+                    text-transform: uppercase;
+                    border: 1px solid #CEF2D7;
+                    background-color: #CEF2D7;
+                    color:#05577D;
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+
+            }
+        }
+
+    }
+    .arrows {
+
+        width: 85vw;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: translate(-50% -25px);
+        display: flex;
+        justify-content: space-between;
+        
+
+        & button:nth-child(1) {
+            & img {
+                transform: scale(-1);
+                filter: brightness(0) saturate(100%) invert(96%) sepia(5%) hue-rotate(180deg) saturate(200%) brightness(95%);
+            }
+
+        }
+
+        & button {
+            background-color: #05577D;
+            z-index: 3;
+            top:60%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+    
+            & img {
+                width: 30px;
+                margin-top: 4px;
+                filter: brightness(0) saturate(100%) invert(96%) sepia(5%) hue-rotate(180deg) saturate(200%) brightness(95%);
+                transition: filter 0.3s ease;
+            }
+
+           
+        }
+
+        & button:hover {
+            background-color:#CEF2D7;
+            
+
+            & img:hover {
+                width: 30px;
+                margin-top: 4px;
+                filter: brightness(0) saturate(100%) invert(26%) sepia(83%) hue-rotate(160deg) saturate(600%) brightness(90%);
+                
+            }
+            
+        }
+    }
+
+    .indicators {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 200px;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 0px;
+
+        & .number {
+            
+            font-size: 6em;
+            font-family: 'Bebas Neue';
+            font-weight: 500;
+            color:#065473;
+        }
+
+        & ul {
+            display: flex;
+            gap: 10px;
+
+            & li {
+                width: 50px;
+                height: 5px;
+                background-color: #05577D;
+                border-radius: 5px;
+                transition: 0.5s;
+            }
+
+            & .active {
+                background-color: #CEF2D7;
+            }
+        }
+
+
+    }
+
+    &#section1::before {
+        content: '';
+        position: absolute;
+        height: 200px;
+        width: 85%;
+        top: 53.5%;
+        left: 5%;
+        border-top: 2px solid #03588C;
+        overflow: hidden;
+       
+        
+    }
+
+}
+
+section {
+
+    & .list {
+        overflow: hidden;
+        
+        & .item {
+            transform: translateX(100vw);
+            transition: 0.5s;
+            opacity: 0;
+            
+            
+            
+            & .consulta-img {
+
+                & img {
+                    transform: rotate(0deg);
+                    transition: 0.5s;
+                    transition-delay: 0.3s;
+
+                }
+            }
+
+            & .content {
+
+                & .informacao-servico, h2, .description, .information {
+                    transform: translateX(200px);
+                    transition: 0.7s;
+                    transition-delay: 0.3s;
+                    opacity: 0;
+
+                }
+
+                & h2 {
+                    transition-delay: 0.5s;
+                }
+
+                & .description {
+                    transition-delay: 0.7s;
+                }
+
+                & .information {
+                    transition-delay: 0.9s;
+                }
+
+            }
+        }
+
+        & .active {
+
+            transform: translateX(0);
+            transition: 0.5s;
+            opacity: 1;
+
+             
+            & .consulta-img {
+
+                & img {
+                    transform: rotate(0deg);
+                }
+            }
+
+            & .content {
+
+                & .informacao-servico, h2, .description, .information {
+                    transform: translateX(0);
+                    opacity: 1;
+
+                }
+            }
+
+
+        }
+    }
+}
+/**/
+.equipe-container {
+    background-color: #03588C;
+    width: 100%;
+    height: 65vw;
+    transform: skewY(-3deg);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+
+.nossa-equipe {
+    transform: skewY(3deg);
+    color: #CEF2D7;
+    line-height: 1em;
+    font-size: 5rem;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    font-weight:500;
+    position: absolute;
+    top: 10%;
+}
+
+.rotacao {
+    transform: skewY(3deg);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-1 {
+    
+    position : relative;
+    width : 1100px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    flex-wrap : wrap;
+    padding : 30px;  
+  }
+  
+  .container-1 .card {
+    position: relative;
+    max-width : 300px;
+    height : 215px;  
+    background-color : #fff;
+    margin : 30px 10px;
+    padding : 20px 15px;
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 0px;
+  }
+  .container-1 .card:hover {
+    height : 320px;    
+  }
+  
+  
+  .container-1 .card .image {
+    position : relative;
+    width : 260px;
+    height : 270px;
+    top : -40%;
+    left: 8px;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+    z-index : 1;
+  }
+  
+  .container-1 .card .image img {
+    max-width : 100%;
+    height: 100%;
+    border-radius : 0px;
+  }
+  
+  .container-1 .card .content {
+    position : relative;
+    top : -140px;
+    padding : 10px 15px;
+    color : #03588C;
+    font-family: 'Poppins';
+    text-align : left;
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;
+
+    & h3 {
+        text-align: center;
+    }
+      
+  }
+  
+  .container-1 .card:hover .content {
+     margin-top : 30px;
+     visibility : visible;
+     opacity : 1;
+     transition-delay: 0.2s;
+    
+}
+
+.localizacao-container {
+    background-color:  #CEF2D7;
+    width: 100%;
+    height: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mapa {
+    color: #065473;
+    font-family: 'Bebas Neue';
+    line-height: 1em;
+    font-size: 5rem;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    font-weight:500;
+    position: absolute;
+    top:10%;   
+}
+
+footer {
+    width: 100%;
+    height: 500px;
+    background-color:#03588C;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+.redes {
+    color: #CEF2D7;
+    font-family: 'Bebas Neue';
+    line-height: 1em;
+    font-size: 3rem;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    font-weight:500;
+    position: absolute;
+}
+
+.icons {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+   
+}
+
+i {
+    color: #EBF1F2;
+    padding: 5px;
+    font-size: 50px;
+}
+
+
+h5 {
+    color: #CEF2D7;
+    font-family: 'Bebas Neue';
+    font-size: 1rem;
+    font-family: 'Poppins';
+    position: absolute;
+    margin-top: 450px;
+}
+
+
+
+
+
